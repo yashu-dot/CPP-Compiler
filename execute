@@ -1,0 +1,9 @@
+rm -f a.out
+rm -f tokens.txt
+rm -f symbol.txt
+
+yacc -d parser.y
+lex lexer.l
+gcc y.tab.c lex.yy.c -ll
+
+./a.out Input_files/input_1.cpp
